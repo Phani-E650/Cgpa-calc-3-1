@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from time import sleep
-from dotenv import load_dotenv
 import os,time
 rgno=input("Enter the full registration number to view your 3-1 cgpa and Percentage")
 option=webdriver.ChromeOptions()
