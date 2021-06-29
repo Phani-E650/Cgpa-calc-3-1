@@ -28,10 +28,13 @@ for i in cols:
 	k.append(i.text)
 
 v=len(l)
-for i in range(2,v-1):
+for i in range(1,v-1):
 	p.append(list(l[i].split(" "))[-2:])
+#print(p)
 
 def grade(q):
+	if(q=="COMPLETED"):
+		return 0
 	if(q=="O"):
 		return 10
 	elif(q=="S"):
