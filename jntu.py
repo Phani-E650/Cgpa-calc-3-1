@@ -4,9 +4,18 @@ from selenium.webdriver.chrome.options import Options
 from time import sleep
 import os,time
 rgno=input("Enter the full registration number to view your 3-1 cgpa and Percentage")
-option=webdriver.ChromeOptions()
-option.add_argument('headless') #Set the parameters of the option
-driver = webdriver.Chrome(chrome_options=option) # Open Google Chrome
+
+
+
+
+
+
+chrome_options=webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("disable-dev-shm-usage")
+chrome_options.add_argument("no-sandbox")
+chrome_options.add_argument('headless') #Set the parameters of the option
+driver = webdriver.Chrome(chrome_options=chrome_options) # Open Google Chrome
 #driver = webdriver.Chrome("chromedriver.exe", options=opt)
 driver.get("https://jntukresults.edu.in/view-results-56736132.html")
 
@@ -62,6 +71,5 @@ cgpa = round(percentage(p)/total(p),2)
 percentage = round(((percentage(p)/total(p))-0.7)*10,2)
 print("The Cgpa is:" + str(cgpa))
 print("The Percentage is:" + str(percentage))
-
 driver.close()
 
