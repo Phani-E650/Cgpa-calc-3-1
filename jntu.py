@@ -56,7 +56,7 @@ def total(p):
 		a=a+int(i[1])
 	return a
 cgpa = round(percentage(p)/total(p),2)
-percentage = round((percentage(p)/total(p))-0.7,2)
+percentage = round(((percentage(p)/total(p))-0.7)*10,2)
 print("The Cgpa is:" + str(cgpa))
 print("The Percentage is:" + str(percentage))
 
