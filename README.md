@@ -7,4 +7,4 @@ python jntu.py\
 Enter valid registration number\
 
 
-Note:*Check you chrome and chrome driver version*
+Note:*Check you chrome and chrome driver version matches*
